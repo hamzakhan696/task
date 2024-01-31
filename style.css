@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    background-image: url('images/bg.png');
+    background-position: center;
+    background-size: 40%; /* Adjust the percentage to your desired size */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 780px) {
+    body::before {
+        background: rgba(255, 255, 255, 0.3); 
+    }
+}
+
+h1, h2, h6 ,p, li{
+    font-family: 'Poppins', sans-serif;
+}
+/* sidebar */
+.section-1 {
+    height: 100vh;
+    position: relative;
+    display: flex; /* Add this line to make the children of .section a flex container */
+}
+
+.side-bar1 {
+    background-color: black;
+    height: 100vh;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px; /* Adjust the padding as needed */
+    z-index: 9999;
+}
+
+.side-bar1 img {
+    width: 42px; /* Adjust the width of the icons as needed */
+    height: auto;
+    margin-bottom: 10px; /* Adjust the margin between icons as needed */
+}
+.profile-image{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.bottom-arrow{
+    border-top: 1px solid #fff;
+}
+
+.bottom-arrow {
+    position: absolute;
+    bottom: 10%; /* Adjust the percentage to position it at the desired height */
+}
+
+.main-section {
+    flex: 1; /* Add this line to make .main-section take the remaining space */
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 28px !important;
+    font-weight: 600;
+    margin-top: 3%;
+    color: #002c5b;
+}
+.input-text p{
+    color: #002c5b;
+    font-size: 18px;
+    font-weight: 600;
+}
+.input-text input {
+    border-radius: 50px;
+    border: 1px solid #000;
+}
+.input-text .form-group input:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #002c5b;
+}
+.lines {
+    display: flex;
+    align-items: center;
+}
+
+.line-before,
+.line-after {
+    flex: 1;
+    border: 0.5px solid #002c5b;
+    margin: 10px 0;
+}
+.line-before{
+    margin-left: 10%;
+    margin-right: 10px;
+}
+.line-after {
+    margin-left: 10px;
+    margin-right: 10%;
+}
+.recent-activity h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #002c5b;
+}
+.boxes{
+    border-radius: 30px;
+    padding: 20px 5px;
+    border: 0.2px solid #333;
+    margin: 0 70px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+.boxes:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
+}
+.boxes h6{
+    font-size: 18px;
+    font-weight: 600;
+    color: #002c5b;
+}
+.boxes img{
+    width: 60px;
+}
+
+/* media queries for mobile */
+@media screen and (max-width: 980px) {
+    .boxes{
+        margin: 0 20px;
+    }
+    .boxes img{
+        width: 35px !important;
+    }
+    .input-text p{
+        font-size: 14px !important;
+    }
+  }
+  /* footer */
+  footer{
+    background-color: #002c5b;
+  }
+  footer img{
+    width: 40px;
+  }
+  .profile-bar{
+    background-color: #000;
+  }
+  .profile-bar .logo img{
+    width: 50px;
+  }
+  .profile-bar .profile-img img{
+    width: 40px;
+    margin-top: 2px;
+  }
+  .logout-bar{
+    background-color: #002c5b;
+  }
+.logout-bar h6{
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400    ;
+}
+  @media screen and (max-width: 580px) {
+    .boxes img{
+        width: 35px !important;
+    }
+    .title h1 {
+        font-size: 20px !important;
+    }
+    .boxes h6{
+        font-size: 14px;
+        font-weight: 400;
+    }
+  }
+  
+  body {
+    height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--trans-02);
+  }
+  
+  body.dark {
+    --body-color: #181914;
+    --sidebar-color: #242526;
+    --primary-color: #34383c;
+    --primary-color-light: #383a3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+    --dark-color: #fff;
+  }
+  /* Reusable CSS */
+  
+  .sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    /* transition: var(--trans-04); */
+    white-space: unset;
+    opacity: 1;
+  }
+  
+  .sidebar .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 300px;
+    background-color: var(--sidebar-color);
+    padding: 10px 14px;
+    transition: var(--trans-02);
+    background-color: #002c5b;
+    z-index: 99;
+  }
+  
+  .sidebar header {
+    position: relative;
+  }
+  .sidebar .image-text img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  
+  .sidebar header .image-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar header .toggle {
+    position: absolute;
+    top: 10%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 20px;
+    width: 20px;
+    background-color: #002c5b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  .sidebar li {
+    height: 50px;
+    /* background-color: red; */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar.close {
+    width: 78px;
+  }
+  
+  .sidebar.close .text {
+    opacity: 0;
+  }
+  
+  .sidebar.close .toggle {
+    transform: translateY(-50%);
+    transform: translateX(30%);
+    background-color: #000;
+  }
+  .menu-title h1{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: -10%;
+    margin-top: 5%;
+  }
+  .menu .list-item{
+    color: #fff;
+    font-size: 14px;
+  }
+  .menu .profile{
+    margin-top: 2% !important;
+    margin-left: 28% !important;
+    border-top: 2px solid #fff ;
+  }
+  .menu .search{
+    margin-top: 2% !important;
+    margin-left: 28% !important;
+    border-top: 2px solid #fff ;
+  }
+  .menu .home{
+    margin-top: 2% !important;
+    margin-left: 28% !important;
+  }
+  .menu .toolkit{
+    margin-top: 0% !important;
+    margin-left: 28% !important;
+  }
+  .menu .logout{
+    margin-top: 91%;
+    margin-left: 28%;
+    border-top: 2px solid #fff ;
+  }
+ 
