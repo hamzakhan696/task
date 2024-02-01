@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<div class="logout-bar d-flex flex-column justify-content-end align-items-end py-2 px-2 d-block d-md-none">
+<div class="logout-bar d-flex flex-column justify-content-end align-items-end py-2 px-2" style="display: none !important;">
   <h6>View Profile</h6>
   <h6>Logout</h6>
 </div>
@@ -92,7 +92,7 @@
             </div>
             <div class="section-boxes mt-5">
               <div class="container">
-                  <div class="row">
+                  <div class="row mx-md-5">
                     <div class="col-6 col-md">
                         <div class="boxes">
                             <div class="text"><h6>Purchase</h6></div>
@@ -133,9 +133,9 @@
         sidebar.classList.toggle("close");
       });
       function showLogoutBar() {
-        var logoutBar = document.querySelector('.logout-bar');
-        logoutBar.classList.toggle('slide-down');
-    }
+    const logoutBar = document.querySelector('.logout-bar');
+    logoutBar.style.setProperty('display', (logoutBar.style.display === 'none' || logoutBar.style.display === '') ? 'block' : 'none', 'important');
+}
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

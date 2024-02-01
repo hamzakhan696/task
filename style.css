@@ -67,11 +67,11 @@ h1, h2, h6 ,p, li{
 /* Media query for small screens (max-width: 767px) */
 @media screen and (max-width: 767px) {
     .bg-image {
-        background-size: contain; /* Adjust the size property as needed */
+        background-size: 50%; /* Adjust the size property as needed */
     }
 }
 .title h1 {
-    font-size: 28px !important;
+    font-size: 30px !important;
     font-weight: 600;
     margin-top: 3%;
     color: #002c5b;
@@ -79,7 +79,7 @@ h1, h2, h6 ,p, li{
 .input-text p{
     color: #002c5b;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .input-text input {
     border-radius: 50px;
@@ -111,7 +111,7 @@ h1, h2, h6 ,p, li{
 }
 .recent-activity h2{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     color: #002c5b;
 }
 .boxes{
@@ -119,7 +119,7 @@ h1, h2, h6 ,p, li{
     border-radius: 30px;
     padding: 20px 5px;
     border: 0.2px solid #333;
-    margin: 0 70px;
+    margin: 0 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 .boxes:hover {
@@ -127,17 +127,20 @@ h1, h2, h6 ,p, li{
 }
 .boxes h6{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #002c5b;
 }
 .boxes img{
-    width: 60px;
+    width: 90px;
 }
 
 /* media queries for mobile */
 @media screen and (max-width: 980px) {
     .boxes{
-        margin: 0 20px;
+        margin: 0 20px !important;
+    }
+    .boxes h6{
+        font-weight: 700;
     }
     .boxes img{
         width: 35px !important;
@@ -154,6 +157,7 @@ h1, h2, h6 ,p, li{
     width: 40px;
   }
   .profile-bar{
+    position: relative;
     background-color: #000;
   }
   .profile-bar .logo img{
@@ -164,19 +168,12 @@ h1, h2, h6 ,p, li{
     margin-top: 2px;
   }
   .logout-bar {
-    position: fixed;
-    top: -100px;
-    left: 0;
-    width: 100%;
     background-color: #002c5b;
     color: white;
     padding: 10px;
     text-align: right;
-    transition: top 0.5s ease;
 }
-.logout-bar.slide-down {
-    top: 60px; 
-}
+
 .logout-bar h6{
     font-size: 10px;
     color: #fff;
@@ -184,14 +181,14 @@ h1, h2, h6 ,p, li{
 }
   @media screen and (max-width: 580px) {
     .boxes img{
-        width: 35px !important;
+        width: 40px !important;
     }
     .title h1 {
         font-size: 20px !important;
     }
     .boxes h6{
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 700;
     }
   }
   
@@ -306,7 +303,7 @@ h1, h2, h6 ,p, li{
     font-size: 14px;
   }
   .menu .profile{
-    margin-top: 2% !important;
+    margin-top: 8px !important;
     margin-left: 28% !important;
     border-top: 2px solid #fff ;
   }
