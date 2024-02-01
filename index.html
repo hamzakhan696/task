@@ -17,11 +17,13 @@
     <div class="profile-img ml-auto" id="profile-img">
       <img src="images/girl-pic.jpeg" alt="girl-pic" class="img-fluid mr-2" onclick="toggleLogout()">
     </div>
+
+    <div class="logout-bar d-none d-md-none" id="logout-bar">
+        <h6>View Profile</h6>
+        <h6>Logout</h6>
+      </div>
   </div>
-  <div class="logout-bar" id="logout-bar">
-      <h6>View Profile</h6>
-      <h6>Logout</h6>
-    </div>
+  
       <!-- large devices -->
   
       <div class="section-1">
@@ -42,7 +44,6 @@
                   <li class="list-item logout">Logout</li>
   
               </ul>
-  
           </div>
     
         </nav>
@@ -90,20 +91,20 @@
               </div>
               <div class="section-boxes mt-5">
                 <div class="container">
-                    <div class="row mx-md-5">
-                      <div class="col-6 col-md">
+                    <div class="row icons-wrapper mx-md-5">
+                      <div class="">
                           <div class="boxes">
                               <div class="text"><h6>Purchase</h6></div>
                               <img src="images/house-left.png" alt="house-icon">
                           </div>
                       </div>
-                      <div class="col-6 col-md me-5">
+                      <div class=" me-5">
                           <div class="boxes">
                               <div class="text"><h6>Sale</h6></div>
                               <img src="images/house-right.png" alt="house-icon">
                           </div>
                       </div>
-                      <div class="col-6 col-md me-5 mt-5 mt-md-0">
+                      <div class="me-5">
                           <div class="boxes">
                               <div class="text"><h6>Stamp Duty</h6>
                               </div>
@@ -115,17 +116,25 @@
               </div>
           </div>
       </div>
-      <footer class="d-block d-md-none py-2">
-          <div class="footer-icons d-flex justify-content-between align-items-center mx-5">
+      <div class="bottom-bar d-block d-md-none">
+          <div class="footer-icons d-flex justify-content-between align-items-center mx-5 py-3">
               <img src="images/house.png" alt="house">
               <img src="images/search.png" alt="search" style="width: 29  px;">
               <img src="images/bag.png" alt="bag">
           </div>
       </footer>
      <script>
+        const body = document.querySelector("body"),
+            sidebar = document.querySelector(".sidebar"),
+            toggle = document.querySelector(".toggle")
+
+            toggle.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+        });
         function toggleLogout() {
             var logoutBar = document.getElementById("logout-bar");
             logoutBar.classList.toggle("show-profile");
+            logoutBar.classList.toggle('d-block');
             }
      </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

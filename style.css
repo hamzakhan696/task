@@ -34,6 +34,7 @@ h1, h2, h6 ,p, li{
     width: 42px;
     height: auto;
     margin-bottom: 10px; 
+    cursor: pointer;
 }
 .profile-image{
     border-top: 1px solid #fff;
@@ -45,12 +46,13 @@ h1, h2, h6 ,p, li{
 
 .bottom-arrow {
     position: absolute;
-    bottom: 10%; 
+    bottom: 3%; 
 }
 
 .main-section {
     flex: 1;
     text-align: center;
+    padding: 0 1rem;
 }
 .bg-image {
     background-image: url('images/bg.png');
@@ -93,6 +95,7 @@ h1, h2, h6 ,p, li{
 .lines {
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 
 .line-before,
@@ -114,19 +117,24 @@ h1, h2, h6 ,p, li{
     font-weight: 700;
     color: #002c5b;
 }
+.icons-wrapper{
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: nowrap !important;
+}
 .boxes{
     background-color: #fff;
-    border-radius: 30px;
-    padding: 20px 5px;
+    border-radius: 50px;
+    padding: 20px 30px;
+    width: 225px;
     border: 0.2px solid #333;
-    margin: 0 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 .boxes:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 .boxes h6{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: #002c5b;
 }
@@ -146,29 +154,37 @@ margin-top: 8%;
 }
 /* media queries for mobile */
 @media screen and (max-width: 980px) {
-    .boxes{
-        margin: 0 20px !important;
+    .icons-wrapper{
+      gap: 2rem;
+      flex-wrap: wrap !important;
+      justify-content: start;
     }
+  
     .boxes h6{
         font-weight: 700;
     }
     .boxes img{
-        width: 35px !important;
+        width: 95px !important;
     }
     .input-text p{
-        font-size: 14px !important;
+        font-size: 22px !important;
     }
   }
   /* footer */
-  footer{
+  .bottom-bar{
     background-color: #002c5b;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
   }
-  footer img{
-    width: 32px;
+  .bottom-bar img{
+    width: 50px;
   }
   .profile-bar{
     position: relative;
     background-color: #000;
+    z-index: 999;
+    position: relative;
   }
   .profile-bar .logo img{
     width: 50px;
@@ -182,11 +198,12 @@ margin-top: 8%;
     color: white;
     padding: 10px;
     text-align: right;
-    margin-top: -16%;
-    transition: margin-top 0.3s ease; 
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
 }
 .show-profile {
-  margin-top: 0%;
+  transform:translateY(0%);
 }
 
 .logout-bar h6{
@@ -195,14 +212,19 @@ margin-top: 8%;
     font-weight: 400    ;
 }
   @media screen and (max-width: 580px) {
-    .boxes img{
-        width: 55px !important;
+    .icons-wrapper .boxes{
+      width: 175px;
     }
+    .profile-bar .logo img{
+      margin-left: 30px;
+    }
+    
     .title h1 {
-        font-size: 20px !important;
+        margin-top: 40px;
+        font-size: 22px !important;
     }
     .boxes h6{
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 700;
     }
   }
@@ -244,13 +266,13 @@ margin-top: 8%;
     position: fixed;
     top: 0;
     left: 0px;
-    height: 100%;
+    height: 100vh;
     width: 300px;
     background-color: var(--sidebar-color);
     padding: 10px 14px;
     transition: var(--trans-02);
     background-color: #002c5b;
-    transition: width 0.1s;
+    transition: width 0.2s ease-in-out;
     z-index: 99;
   }
   
@@ -282,6 +304,7 @@ margin-top: 8%;
     border-radius: 50%;
     color: #fff;
     font-size: 22px;
+    cursor: pointer;
   }
   
   .sidebar li {
@@ -316,6 +339,7 @@ margin-top: 8%;
   .menu .list-item{
     color: #fff;
     font-size: 14px;
+    cursor: pointer;
   }
   .menu .profile{
     margin-top: 8px !important;
@@ -336,15 +360,21 @@ margin-top: 8%;
     margin-left: 28% !important;
   }
   .menu .logout{
-    margin-top: 89%;
+    margin-top: 0 !important;
     margin-left: 28%;
+    position: absolute;
+    bottom: 3.9%;
     border-top: 2px solid #fff ;
+    padding-top: .25rem;
+    width: 170px;
   }
   @media screen and (max-width: 1024px) {
     .menu .logout{
       margin-top: 75%;
     }
   }
+
+
 
  
  
