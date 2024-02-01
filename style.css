@@ -177,6 +177,9 @@ margin-top: 8%;
     width: 40px;
     margin-top: 2px;
   }
+  .wrapper{
+    overflow: hidden;
+  }
   .logout-bar {
     background-color: #002c5b;
     color: white;

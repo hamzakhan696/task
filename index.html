@@ -10,119 +10,120 @@
 </head>
 <body>
         <!-- for mobile devices -->
-
+<div class="wrapper">
 <div class="profile-bar d-flex py-2 d-block d-md-none">
-  <div class="logo d-flex align-items-center justify-content-center flex-grow-1">
-    <img src="images/icon.png" alt="logo" class="img-fluid">
+    <div class="logo d-flex align-items-center justify-content-center flex-grow-1">
+      <img src="images/icon.png" alt="logo" class="img-fluid">
+    </div>
+    <div class="profile-img ml-auto" id="profile-img">
+      <img src="images/girl-pic.jpeg" alt="girl-pic" class="img-fluid mr-2" onclick="toggleLogout()">
+    </div>
   </div>
-  <div class="profile-img ml-auto" id="profile-img">
-    <img src="images/girl-pic.jpeg" alt="girl-pic" class="img-fluid mr-2" onclick="toggleLogout()">
-  </div>
-</div>
-<div class="logout-bar" id="logout-bar">
-    <h6>View Profile</h6>
-    <h6>Logout</h6>
-  </div>
-    <!-- large devices -->
-
-    <div class="section-1">
-      <div class="bg-image"></div>
-      <nav class="sidebar close d-none d-md-block">
-        <header>
-          <div class="menu-title text-center">
-            <h1>Menu</h1>
-        </div>
-          <i class="bx bx-chevron-right toggle"></i>
-        </header>
-          <div class="menu">
-            <ul class="ml-2">
-                <li class="list-item mt-4 profile">View Profile</li>
-                <li class="list-item pt-4 search">Search</li>
-                <li class="list-item mt-4 home">Home</li>
-                <li class="list-item mt-4 toolkit">Financial Toolkit</li>
-                <li class="list-item logout">Logout</li>
-
-            </ul>
-
-        </div>
+  <div class="logout-bar" id="logout-bar">
+      <h6>View Profile</h6>
+      <h6>Logout</h6>
+    </div>
+      <!-- large devices -->
   
-      </nav>
-        <div class="side-bar1 d-none d-md-block">
-            <div>      
-                <img src="images/icon.jpeg" alt="house-icon"style="margin-top:2px">     
-            </div> 
-            <div class="profile-image pt-2">      
-                <img src="images/girl-pic.jpeg" alt="house-icon" class="img-fluid">     
-            </div>
-            <div class="mt-3">      
-                <img src="images/search.png" alt="bag-icon" class="img-fluid" style="width: 35px; margin-left:2px">     
-            </div>
-            <div>      
-                <img src="images/house.png" alt="house-icon" class="img-fluid">     
-            </div>   
-            <div>      
-                <img src="images/bag.png" alt="bag-icon" class="img-fluid">     
-            </div>
-            <div class="bottom-arrow pt-1"> 
-                <img src="images/arrow.png" alt="arrow-icon" class="img-fluid">     
-            </div>
-            
-        </div>
-        <div class="main-section text-center">
-            <div class="title">
-                <h1>What would you like to do today?</h1>
-            </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-6">
-                    <div class="input-text mx-2">
-                        <div class="form-group d-flex align-items-center">
-                            <p class="mb-0 mr-2 text-nowrap">I want to</p>
-                            <input type="email" class="form-control py-4 w-sm-50 w-100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Calculate my loan to value">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="recent-activity mt-5">
-                <div class="lines">
-                    <hr class="line-before">
-                    <h2>Recent activity</h2>
-                    <hr class="line-after">
-                </div>
-            </div>
-            <div class="section-boxes mt-5">
-              <div class="container">
-                  <div class="row mx-md-5">
-                    <div class="col-6 col-md">
-                        <div class="boxes">
-                            <div class="text"><h6>Purchase</h6></div>
-                            <img src="images/house-left.png" alt="house-icon">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md me-5">
-                        <div class="boxes">
-                            <div class="text"><h6>Sale</h6></div>
-                            <img src="images/house-right.png" alt="house-icon">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md me-5 mt-5 mt-md-0">
-                        <div class="boxes">
-                            <div class="text"><h6>Stamp Duty</h6>
-                            </div>
-                            <img src="images/house-cal.png" alt="house-icon">
-                        </div>
-                    </div>
+      <div class="section-1">
+        <div class="bg-image"></div>
+        <nav class="sidebar close d-none d-md-block">
+          <header>
+            <div class="menu-title text-center">
+              <h1>Menu</h1>
+          </div>
+            <i class="bx bx-chevron-right toggle"></i>
+          </header>
+            <div class="menu">
+              <ul class="ml-2">
+                  <li class="list-item mt-4 profile">View Profile</li>
+                  <li class="list-item pt-4 search">Search</li>
+                  <li class="list-item mt-4 home">Home</li>
+                  <li class="list-item mt-4 toolkit">Financial Toolkit</li>
+                  <li class="list-item logout">Logout</li>
+  
+              </ul>
+  
+          </div>
+    
+        </nav>
+          <div class="side-bar1 d-none d-md-block">
+              <div>      
+                  <img src="images/icon.jpeg" alt="house-icon"style="margin-top:2px">     
+              </div> 
+              <div class="profile-image pt-2">      
+                  <img src="images/girl-pic.jpeg" alt="house-icon" class="img-fluid">     
+              </div>
+              <div class="mt-3">      
+                  <img src="images/search.png" alt="bag-icon" class="img-fluid" style="width: 35px; margin-left:2px">     
+              </div>
+              <div>      
+                  <img src="images/house.png" alt="house-icon" class="img-fluid">     
+              </div>   
+              <div>      
+                  <img src="images/bag.png" alt="bag-icon" class="img-fluid">     
+              </div>
+              <div class="bottom-arrow pt-1"> 
+                  <img src="images/arrow.png" alt="arrow-icon" class="img-fluid">     
+              </div>
+              
+          </div>
+          <div class="main-section text-center">
+              <div class="title">
+                  <h1>What would you like to do today?</h1>
+              </div>
+              <div class="row justify-content-center mt-5">
+                  <div class="col-md-6">
+                      <div class="input-text mx-2">
+                          <div class="form-group d-flex align-items-center">
+                              <p class="mb-0 mr-2 text-nowrap">I want to</p>
+                              <input type="email" class="form-control py-4 w-sm-50 w-100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Calculate my loan to value">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="recent-activity mt-5">
+                  <div class="lines">
+                      <hr class="line-before">
+                      <h2>Recent activity</h2>
+                      <hr class="line-after">
+                  </div>
+              </div>
+              <div class="section-boxes mt-5">
+                <div class="container">
+                    <div class="row mx-md-5">
+                      <div class="col-6 col-md">
+                          <div class="boxes">
+                              <div class="text"><h6>Purchase</h6></div>
+                              <img src="images/house-left.png" alt="house-icon">
+                          </div>
+                      </div>
+                      <div class="col-6 col-md me-5">
+                          <div class="boxes">
+                              <div class="text"><h6>Sale</h6></div>
+                              <img src="images/house-right.png" alt="house-icon">
+                          </div>
+                      </div>
+                      <div class="col-6 col-md me-5 mt-5 mt-md-0">
+                          <div class="boxes">
+                              <div class="text"><h6>Stamp Duty</h6>
+                              </div>
+                              <img src="images/house-cal.png" alt="house-icon">
+                          </div>
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
-        </div>
-    </div>
-    <footer class="d-block d-md-none py-2">
-        <div class="footer-icons d-flex justify-content-between align-items-center mx-5">
-            <img src="images/house.png" alt="house">
-            <img src="images/search.png" alt="search" style="width: 29  px;">
-            <img src="images/bag.png" alt="bag">
-        </div>
-    </footer>
+          </div>
+      </div>
+      <footer class="d-block d-md-none py-2">
+          <div class="footer-icons d-flex justify-content-between align-items-center mx-5">
+              <img src="images/house.png" alt="house">
+              <img src="images/search.png" alt="search" style="width: 29  px;">
+              <img src="images/bag.png" alt="bag">
+          </div>
+      </footer>
+</div>
      <script>
         function toggleLogout() {
             var logoutBar = document.getElementById("logout-bar");
