@@ -133,7 +133,17 @@ h1, h2, h6 ,p, li{
 .boxes img{
     width: 90px;
 }
-
+@media screen and (max-width: 510px) {
+  .line-before,
+.line-after {
+    flex: 1;
+    border: 1px solid #002c5b;
+    margin: 12px 0;
+}
+.main-section .title{
+margin-top: 8%;
+}
+}
 /* media queries for mobile */
 @media screen and (max-width: 980px) {
     .boxes{
@@ -154,7 +164,7 @@ h1, h2, h6 ,p, li{
     background-color: #002c5b;
   }
   footer img{
-    width: 40px;
+    width: 32px;
   }
   .profile-bar{
     position: relative;
@@ -181,7 +191,7 @@ h1, h2, h6 ,p, li{
 }
   @media screen and (max-width: 580px) {
     .boxes img{
-        width: 40px !important;
+        width: 55px !important;
     }
     .title h1 {
         font-size: 20px !important;
@@ -313,16 +323,23 @@ h1, h2, h6 ,p, li{
     border-top: 2px solid #fff ;
   }
   .menu .home{
-    margin-top: 2% !important;
+    margin-top: 3% !important;
     margin-left: 28% !important;
   }
   .menu .toolkit{
-    margin-top: 0% !important;
+    margin-top: 1% !important;
     margin-left: 28% !important;
   }
   .menu .logout{
-    margin-top: 91%;
+    margin-top: 89%;
     margin-left: 28%;
     border-top: 2px solid #fff ;
   }
+  @media screen and (max-width: 1024px) {
+    .menu .logout{
+      margin-top: 75%;
+    }
+  }
+
+ 
  
