@@ -173,7 +173,7 @@ margin-top: 8%;
   /* footer */
   .bottom-bar{
     background-color: #002c5b;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
   }
@@ -213,7 +213,7 @@ margin-top: 8%;
 }
   @media screen and (max-width: 580px) {
     .icons-wrapper .boxes{
-      width: 175px;
+      width: 140px;
     }
     .profile-bar .logo img{
       margin-left: 30px;
@@ -224,7 +224,7 @@ margin-top: 8%;
         font-size: 22px !important;
     }
     .boxes h6{
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
     }
   }
